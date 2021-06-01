@@ -1,6 +1,8 @@
 package hibernate.filter.example
 
-class Student {
+import org.grails.plugin.hibernate.filter.WithHibernateFilter
+
+class Student implements WithHibernateFilter {
 
     String name
     Integer status = 1

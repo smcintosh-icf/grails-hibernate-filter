@@ -1,6 +1,8 @@
 package hibernate.filter.example
 
-class Loan {
+import org.grails.plugin.hibernate.filter.WithHibernateFilter
+
+class Loan implements WithHibernateFilter {
 
     Integer amount
     Integer status = 1

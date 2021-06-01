@@ -1,6 +1,8 @@
 package hibernate.filter.example
 
-class Foo {
+import org.grails.plugin.hibernate.filter.WithHibernateFilter
+
+class Foo implements WithHibernateFilter {
 
     String name
     Boolean enabled

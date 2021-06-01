@@ -1,6 +1,8 @@
 package hibernate.filter.example
 
-class User {
+import org.grails.plugin.hibernate.filter.WithHibernateFilter
+
+class User implements WithHibernateFilter {
 
     static constraints = {
     }

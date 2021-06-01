@@ -1,11 +1,14 @@
 package hibernate.filter.example
 
-import grails.test.mixin.*
+import grails.testing.gorm.DataTest
+import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.*
 
-@TestFor(UserController)
-@Mock(User)
-class UserControllerSpec extends Specification {
+class UserControllerSpec extends Specification implements ControllerUnitTest<UserController>, DataTest {
+
+    void setupSpec() {
+        mockDomain User
+    }
 
     def populateValidParams(params) {
         assert params != null
