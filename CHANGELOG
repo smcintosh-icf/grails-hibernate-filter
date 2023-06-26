@@ -1,4 +1,13 @@
 ## Change Log
+##### 2023-06-26
+### 1.0.0
+- Upgraded to Grails version 5.2.5
+- Upgraded Gradle to 7.2
+- Changed logback.groovy to logback.xml
+- Changed build.gradle to use current methods (i.e., compile -> implementation)
+- Removed unsupported H2 attribute 'MVCC=TRUE' in application.yml
+- Removed deprecated 'apply plugin: "org.grails.grails-plugin-publish"' from build.gradle
+    (See https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html)
 
 ### 0.2.0
 ##### 2016-07-20

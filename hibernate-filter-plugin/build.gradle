@@ -5,6 +5,7 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
+        classpath "org.grails.plugins:hibernate5:7.3.0"
     }
 }
 
@@ -13,7 +14,8 @@ group 'org.grails.plugin'
 
 apply plugin: "idea"
 apply plugin: "org.grails.grails-plugin"
-apply plugin: "org.grails.grails-plugin-publish"
+// apply plugin: "org.grails.grails-plugin-publish"
+// See https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html
 
 ext {
     grailsVersion = project.grailsVersion
@@ -34,22 +36,22 @@ configurations {
 
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    compile "org.springframework.boot:spring-boot-starter-logging"
-    compile "org.springframework.boot:spring-boot-autoconfigure"
-    compile "org.grails:grails-core"
-    compile "org.grails:grails-plugin-interceptors"
-    compile "com.github.jitpack:gradle-simple:1.0.5"
+    implementation "org.springframework.boot:spring-boot-starter-logging"
+    implementation "org.springframework.boot:spring-boot-autoconfigure"
+    implementation "org.grails:grails-core"
+    implementation "org.grails:grails-plugin-interceptors"
+    implementation "com.github.jitpack:gradle-simple:1.0.5"
     compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
     profile "org.grails.profiles:plugin"
-    testCompile "io.micronaut:micronaut-inject-groovy"
-    testCompile "org.grails:grails-gorm-testing-support"
-    testCompile "org.grails:grails-web-testing-support"
-    testCompile "org.mockito:mockito-core"
+    testImplementation "io.micronaut:micronaut-inject-groovy"
+    testImplementation "org.grails:grails-gorm-testing-support"
+    testImplementation "org.grails:grails-web-testing-support"
+    testImplementation "org.mockito:mockito-core"
 
-    provided "org.grails.plugins:hibernate5"
-    provided "org.hibernate:hibernate-core:5.4.18.Final"
-    provided "org.hibernate:hibernate-ehcache:5.4.18.Final"
+    implementation "org.grails.plugins:hibernate5"
+    implementation "org.hibernate:hibernate-core:5.6.11.Final"
+    implementation "org.hibernate:hibernate-ehcache:5.6.11.Final"
 }
 
 
@@ -73,19 +75,19 @@ tasks.withType(GroovyCompile) {
 // enable if you wish to package this plugin as a standalone application
 bootJar.enabled = false
 
-grailsPublish {
-    user = ''
-    key = ''
-    userOrg = 'grails'
-    repo = 'plugins'
-    websiteUrl = 'https://github.com/yvdlima/grails-hibernate-filter'
-    githubSlug = 'grails-hibernate-filter'
-    license {
-        name = 'Apache-2.0'
-    }
-    title = 'Zip City State Plugin'
-    issueTrackerUrl = 'https://github.com/yvdlima/grails-hibernate-filter'
-    vcsUrl = 'https://github.com/yvdlima/grails-hibernate-filter'
-    desc = '''Provides utilities to populate the US City and State from the provided 5 digit Zip code.'''
-    developers = [ alexkramer: 'Alex Kramer', ylima: 'Yuri Lima']
-}
+//grailsPublish {
+//    user = ''
+//    key = ''
+//    userOrg = 'grails'
+//    repo = 'plugins'
+//    websiteUrl = 'https://github.com/smcintosh-icf/grails-hibernate-filter'
+//    githubSlug = 'grails-hibernate-filter'
+//    license {
+//        name = 'Apache-2.0'
+//    }
+//    title = 'Grails Hibernate Filter'
+//    issueTrackerUrl = 'https://github.com/smcintosh-icf/grails-hibernate-filter'
+//    vcsUrl = 'https://github.com/smcintosh-icf/grails-hibernate-filter'
+//    desc = '''Provides a Grails wrapper around the Hibernate Filter capabilities.'''
+//    developers = [ alexkramer: 'Alex Kramer', ylima: 'Yuri Lima', smcintosh: 'Scott McIntosh']
+//}
