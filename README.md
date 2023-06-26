@@ -1,13 +1,9 @@
 # grails-hibernate-filter
-
-[![](https://jitpack.io/v/yvdlima/grails-hibernate-filter.svg)](https://jitpack.io/#yvdlima/grails-hibernate-filter)
-[![Test Plugin](https://github.com/yvdlima/grails-hibernate-filter/actions/workflows/test-action.yml/badge.svg)](https://github.com/yvdlima/grails-hibernate-filter/actions/workflows/test-action.yml)
-
+[comment]: <> ([![]&#40;https://jitpack.io/v/yvdlima/grails-hibernate-filter.svg&#41;]&#40;https://jitpack.io/#yvdlima/grails-hibernate-filter&#41;)
+[comment]: <> ([![Test Plugin]&#40;https://github.com/yvdlima/grails-hibernate-filter/actions/workflows/test-action.yml/badge.svg&#41;]&#40;https://github.com/yvdlima/grails-hibernate-filter/actions/workflows/test-action.yml&#41;)
 # Description
 
-This is a fork of the already forked Grails 3.2 version [alexkramer/grails-hibernate-plugin](https://github.com/alexkramer/ZipCityState) 
-for Grails 4 / GORM 7. The version 1.0 > Contains the Grails 4 code and 1.0 < the Grails 3.
-The packaged can be found in jitpack: https://jitpack.io/#yvdlima/grails-hibernate-filter/1.0.0
+This is a Grails 5 fork of the Grails 4 fork by [yvdlima/grails-hibernate-filter](https://github.com/yvdlima/grails-hibernate-filter), which was forked from the Grails 3.2 version by [alexkramer/grails-hibernate-plugin](https://github.com/alexkramer/grails-hibernate-filter). 
 
 This repo contains two projects:
   
@@ -39,9 +35,9 @@ Add dependency in build.gradle:
     }
     
     dependencies {
-        implementation 'com.github.yvdlima:grails-hibernate-filter:Tag'
+        implementation 'com.github.smcintosh-icf:grails-hibernate-filter:Tag'
     }
 
 # Usage
 
-Please refer to this project's [wiki](https://github.com/alexkramer/grails-hibernate-filter/wiki) for usage.
+Please refer to the original project's [wiki](https://github.com/alexkramer/grails-hibernate-filter/wiki) for usage.
